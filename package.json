@@ -10,7 +10,7 @@
   "license": "GPL",
   "repository": "https://github.com/bassochette/fake-endpoint",
   "dependencies": {
-    "body-parser": "^1.15.0",
+    "body": "^5.1.0",
     "colors": "^1.1.2",
     "express": "^4.13.4"
   },

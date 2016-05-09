@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 const express = require("express");
-const bodyParser = require("body-parser");
+const body = require("body");
 const colors = require("colors");
 let port = 5000;
 
@@ -11,7 +11,17 @@ if (process.argv[2]) {
 
 let app = express();
 
-app.use(bodyParser());
+app.use(
+  (req, res, next) => {
+    body(req, res, (err, body) => {
+      if (err) {
+        console.log(`Error parsing body: ${err}`.rainbow);
+      }
+      req.body = body;
+      return next();
+    });
+  }
+);
 
 app.get("*", (req, res) => {
   console.log(`[GET] `.green);
