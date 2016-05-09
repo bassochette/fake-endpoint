@@ -1,0 +1,17 @@
+{
+  "name": "fake-endpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julien Prugne <julien.prugne@gmail.com>",
+  "license": "GPL",
+  "repository": "https://github.com/bassochette/fake-endpoint",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "colors": "^1.1.2",
+    "express": "^4.13.4"
+  }
+}
