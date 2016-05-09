@@ -3,6 +3,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const colors = require("colors");
+let port = 5000;
+
+if (process.argv[2]) {
+  port = process.argv[2];
+}
 
 let app = express();
 
@@ -40,4 +45,4 @@ app.delete("*", (req, res) => {
   res.status(200).send("ok");
 });
 
-app.listen(5000);
+app.listen(port, () => console.log("Fake endpoint listening on port "+port));
